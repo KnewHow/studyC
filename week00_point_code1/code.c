@@ -27,6 +27,8 @@
  *
  */
 #include<stdio.h>
+#include <math.h>
+#include <stdbool.h>
 
 void fun1() {
 	printf("sizeof(char)=%ld\n", sizeof(char));
@@ -58,33 +60,120 @@ void fun4() {
 	printf("int的范围:%d\n", a);
 }
 
+/*
+ * Calculate the range of the unsigned int
+ */
 void fun5() {
 	unsigned int a = 1;
 	long b;
 	while (a != 0) {
 		a = a + 1;
 	}
-	b = a-1;
+	b = a - 1;
 	printf("unsigned int的范围:%ld\n", b);
 }
 
-void fun6(){
+/*
+ * Demo the hex and octonary
+ */
+void fun6() {
 	int a = 012;
 	int b = 0x12a;
-	printf("a=%d,b=%d\n",a,b);
-	printf("a=%o,b=%x\n",a,b);
+	printf("a=%d,b=%d\n", a, b);
+	printf("a=%o,b=%x\n", a, b);
 }
 
-void fun7(){
-	int a=-1;
+/*
+ * Demo %u
+ */
+void fun7() {
+	int a = -1;
 	char b = -1;
-	printf("a=%u,b=%u",a,b);
+	printf("a=%u,b=%u", a, b);
 }
 
+/*
+ * Show float and double input and output method
+ */
+void fun8() {
+	double a = 12345.6789;
+	printf("%f\n", a);
+	printf("%e\n", a);
+	printf("%E\n", a);
+}
+/*
+ * show precision of the float type
+ */
+void fun9() {
+	double a = -0.0049;
+	printf("%.3f\n", a);
+	printf("%.30f\n", a);
+	printf("%.5f\n", a);
+	printf("%.2f\n", a);
+}
+
+/*
+ * show the transgression of the float type
+ */
+void fun10() {
+	printf("%f\n", 12.0 / 0);
+	printf("%f\n", -12.0 / 0);
+	printf("%f\n", 0.0 / 0.0);
+}
+
+/*
+ * Show the deviation of the float type
+ */
+void fun11() {
+	float a, b, c;
+	/*
+	 * If you want to express the number is
+	 * float not double,you need to add the "f" at the
+	 * end of number
+	 */
+	a = 1.345f;
+	b = 1.123f;
+	c = a + b;
+	if (c == 2.468) {
+		printf("Equal\n");
+	} else {
+		printf("not equal,%.10f or %f\n", c, c);
+	}
+}
+
+/*
+ * How to compare two float number
+ */
+void fun12() {
+	float a, b, c;
+	a = 1.345f;
+	b = 1.123f;
+	c = a + b;
+	if (fabs(c - 2.468) < 1e-7) {
+		printf("Equal\n");
+	} else {
+		printf("not equal,%.10f or %f\n", c, c);
+	}
+}
+
+/*
+ * mixing input integer number and char
+ */
+void fun13() {
+	int i;
+	char c;
+	scanf("%d%c", &i, &c);
+	printf("i=%d,c=%d,c='%c'\n", i, c, c);
+}
+
+void fun14(){
+	bool t = 6>5;
+	bool a = false;
+	bool b = 2;
+	printf("t=%d,a=%d b=%d",t,a,b);
+}
 int main() {
-//	fun2();
-//	fun1();
-	fun7();
+	fun14();
 	return 0;
 }
 

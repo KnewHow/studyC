@@ -31,7 +31,9 @@
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1421945259" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1588990121" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug">
-								<option id="gnu.c.link.option.libs.1594831794" name="Libraries (-l)" superClass="gnu.c.link.option.libs" useByScannerDiscovery="false" valueType="libs"/>
+								<option id="gnu.c.link.option.libs.1594831794" name="Libraries (-l)" superClass="gnu.c.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="m"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.608468617" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
