@@ -8,6 +8,9 @@
 
 #include <stdio.h>
 
+/*
+ * Show string
+ */
 void fun1(){
 	int i;
 	char *s="Hello!";
@@ -20,6 +23,9 @@ void fun1(){
 
 }
 
+/*
+ * Shwo string
+ */
 void fun2(){
 	int i;
 	char *s="Hello!";
